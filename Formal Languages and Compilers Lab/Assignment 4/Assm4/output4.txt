@@ -1,0 +1,15 @@
+1
+2 
+3 float id x1  =  3.125 ;  ;  ; 
+4
+5 double id f1 ( float id b ,  int int id x ) 
+6  { if ( id x < id x1 ) 
+7 double id z ;  ; 
+8 else id z  =  0.01 + id x * 5.5 ;  }  } 
+9 else id return id z ; 
+10  } 
+11
+12 int id main ( id void ) 
+13  {  {  {  { 
+14 int id n1 ;  double id z ; 
+15 id n1 = 25 ;  id z = id f1 ( id n1 )  ;  } 

@@ -1,0 +1,7 @@
+#include<stdio.h>
+void main(void){
+int a, b;
+if(a<=5) printf(“Hi”); // <= Rel-op
+else if (b<5 && a==4)
+printf(“!= is rel-op.”)
+}

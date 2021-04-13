@@ -1,0 +1,58 @@
+parent('Rashid' , 'Humayra').
+parent('Rashid' , 'Hasib').
+parent('Rahnuma' , 'Humayra').
+parent('Rahnuma' , 'Hasib').
+parent('Hasib' , 'Aniqua').
+parent('Hasib' , 'Rakib').
+parent('Hasib' , 'Rahman').
+parent('Helena' , 'Aniqua').
+parent('Helena' , 'Rakib').
+parent('Helena' , 'Rahman').
+parent('Rakib' , 'Sohel').
+parent('Rakib' , 'Rebeka').
+parent('Rakib' , 'Faizah').
+male('Rashid').
+male('Hasib').
+male('Rakib').
+male('Sohel').
+male('Rahman').
+female('Humayra').
+female('Rahnuma').
+female('Helena').
+female('Aniqua').
+female('Faizah').
+female('Rebeka').
+
+
+grandparent(X, Z) :- parent(X, Y), parent(Y, Z).
+findGc :- write(' Grandparent: '), read(X), write('Grandchildren: '),
+		grandparent(X, Gc), write(Gc), tab(5), fail.
+
+grandchild(X, Z) :- parent(Y, X), parent(Z, Y).
+findGp :- write(' Grandchild: '), read(X), write('Grandparent: '),
+		grandchild(X, Gp), write(Gp), tab(5), fail.
+
+brother(X,Y):-parent(Z,X), parent(Z,Y), male(X), not(X=Y).
+findBro:-write(' Sibling\'s name: '), read(B), write('Brother: '),
+		brother(X, B), write(X), tab(5), fail.
+
+sister(X,Y):-parent(Z,X), parent(Z,Y), female(X), not(X=Y).
+findSis:-write(' Sibling\'s name: '), read(S), write('Sister: '),
+		sister(X, S), write(X), tab(5), fail.
+
+father(X,Y):-parent(X,Y), male(X).
+findDad:-write(' Child\'s name: '), read(C), write('Father: '),
+		father(X, C), write(X), tab(5), fail.
+
+mother(X,Y):-parent(X,Y), female(X).
+findMom:-write(' Child\'s name: '), read(C), write('Mother: '),
+		mother(X, C), write(X), tab(5), fail.
+
+uncle(X,Y):-parent(G,X),parent(G,P),parent(P,Y),male(G), male(X),not(X=P).
+findUncle:-write(' Niece or nephew\'s name: '), read(N), write('Uncle: '),
+		uncle(X, N), write(X), tab(5), fail.
+
+aunt(X,Y):-parent(G,X),parent(G,P),parent(P,Y),male(G),female(X),not(X=P).
+findAunt:-write(' Niece or nephew\'s name: '), read(A), write('Aunt: '),
+		aunt(X, A), write(X), tab(5), fail.
+

@@ -1,0 +1,27 @@
+Question 1 withOUT pl/sql:
+-Find the name of students who are enrolled in Algorithm course.
+-find the name of the faculty who takes the course 'Database'.
+-Find the student information whose age is 22 and major ME
+-Find the names of students older than 19 who has drawing classes
+-Show department id and name of the faculty with id 1
+-In which room programming classes will be held
+-find the student name level and age who enrolled in  courses?
+-Find Those Courses which are taken by faculty id 2
+-Find the faculty information who takes the course "programming"
+-Show the name of the courses that has enrolled students
+-show the information of the students who aren't enrolled in any course yet
+-Find the name of the  courses where students are doing major in EEE and age less than 20?
+
+Question 2 with pl/sql:
+-Print that how many courses are taken by faculty whose name is 'Rahmatullah' ?
+-Print the name of the student whose age is 24.
+-Find the faculty name and id who is taking the database course 
+-Find the average age of students whose major is ME
+-Show information about student name Abdullah Hafiz major in EEE
+-In which department does student id 1 belong to
+-find the faculty name who takes highest courses?
+-Print Those courses name which are held at R127
+-Find the students information whose major is "CSE" and age is between 19 and 21
+-Show the names of the faculties who belong to the department that has the maximum faculty members
+-print the names of the students whose age is above 20 and will attend faculty id 4s course
+-Find the total number of courses take place at 10:00 am?
